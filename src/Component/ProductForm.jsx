@@ -1,5 +1,5 @@
 import React ,{useState } from 'react'
-import {Form ,Button} from 'react-bootstrap'
+import {Form ,Button , Container , Col , Row} from 'react-bootstrap'
 
 function ProductForm({setView ,setRenderAs , renderAs , initialState}) {
 
@@ -56,6 +56,9 @@ function ProductForm({setView ,setRenderAs , renderAs , initialState}) {
     const [data, setData] = useState(initialState)
 
     return (
+        <Container className="mt-3"> <Row>
+        <Col md={4}></Col>
+        <Col md={4}>
         <Form onSubmit={handleOnSubmit} >
         <Form.Group controlId="formBasicText">
           <Form.Label>Product Name</Form.Label>
@@ -76,6 +79,10 @@ function ProductForm({setView ,setRenderAs , renderAs , initialState}) {
         
         </Button>
       </Form>
+      </Col>
+      <Col md={4}></Col>
+      </Row>
+      </Container>
     )
 }
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button ,Container ,Col ,Row } from "react-bootstrap";
 import Register from './Register'
 
 function Login({setUser , setView}) {
@@ -35,6 +35,9 @@ function Login({setUser , setView}) {
 
 if(login === "login"){
   return (
+    <Container className="mt-3"> <Row>
+    <Col md={4}></Col>
+    <Col md={4}>
     <Form onSubmit={handleOnSubmit}>
       <Form.Group controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
@@ -59,16 +62,28 @@ if(login === "login"){
           required
         />
       </Form.Group>
-      <p onClick={() => setLogin('register')}>Not a user register</p>
+      <p onClick={() => setLogin('register')} className="linktext">Not a user register</p>
       <Button variant="primary" type="submit">
         Login
       </Button>
     </Form>
+          </Col>
+          <Col md={4}></Col>
+          </Row>
+          </Container>
   );
   }
   else{
       return(
-          <Register setLogin={setLogin} setUser={setUser} setView={setView} />
+        <Container className="mt-3"> <Row>
+        <Col md={4}></Col>
+        <Col md={4}>
+          <Register setLogin={setLogin} setUser={setUser} setView={setView} /> 
+
+          </Col>
+          <Col md={4}></Col>
+          </Row>
+          </Container>
       )
   }
 

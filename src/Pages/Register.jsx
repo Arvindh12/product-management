@@ -47,7 +47,7 @@ function Register({setLogin ,setView ,setUser}) {
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="Password" onChange={handleOnChange} value={data.password} name="password"/>
         </Form.Group>
-        <p onClick={()=>setLogin('login')}>Already a user login</p>
+        <p onClick={()=>setLogin('login')} className="linktext" >Already a user login</p>
         <Button variant="primary" type="submit">
           Register
         </Button>

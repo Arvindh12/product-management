@@ -3,6 +3,7 @@ import Login from './Pages/Login'
 import Products from './Pages/Products'
 import NavbarHeader from './Component/NavbarHeader'
 import ProductForm from './Component/ProductForm';
+import './App.css'
 
 
 function App() {
